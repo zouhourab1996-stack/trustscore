@@ -11,9 +11,11 @@
     var aff = C.clickbankAffiliate || '';
     var tid = C.clickbankTid || '';
     if (aff) {
-      a.href = 'https://hop.clickbank.net/?affiliate=' + encodeURIComponent(aff) +
+      /* data-link = full hoplink URL (encrypted short links) — used as-is. */
+      a.href = a.getAttribute('data-link') ||
+               ('https://hop.clickbank.net/?affiliate=' + encodeURIComponent(aff) +
                '&vendor=' + encodeURIComponent(vendor) +
-               (tid ? '&tid=' + encodeURIComponent(tid) : '');
+               (tid ? '&tid=' + encodeURIComponent(tid) : ''));
       a.setAttribute('rel', 'nofollow sponsored noopener');
       a.setAttribute('target', '_blank');
     }
