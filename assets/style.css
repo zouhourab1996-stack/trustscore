@@ -72,3 +72,14 @@ tr:last-child td{border-bottom:0}
 .grid2{display:grid;grid-template-columns:1.55fr 1fr;gap:28px}
 @media(max-width:860px){.grid2{grid-template-columns:1fr}}
 .kicker{color:var(--acc);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+
+/* author box + facts */
+.author{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--bg2);border-radius:14px;padding:14px 16px;margin:22px 0}
+.author .av{flex:0 0 46px;height:46px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#6c7dff,#f5c451);color:#141414;font-weight:900}
+.author p{margin:4px 0 0;font-size:13.5px;color:var(--mut)}
+.facts{border:1px solid rgba(255,107,122,.45);background:rgba(255,107,122,.06);border-radius:14px;padding:14px 18px;margin:18px 0}
+.facts h2,.facts h3{margin-top:4px}.facts li{margin:6px 0}
+.calc{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:18px;margin:16px 0}
+.calc label{display:block;font-size:14px;color:var(--mut);margin:10px 0 4px}
+.calc input[type=number]{width:100%;max-width:260px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font-size:16px}
+.calc .out{font-size:15px;margin-top:14px}.calc .big{font-size:28px;font-weight:900;color:var(--acc)}
