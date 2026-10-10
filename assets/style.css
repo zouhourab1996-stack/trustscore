@@ -83,3 +83,23 @@ tr:last-child td{border-bottom:0}
 .calc label{display:block;font-size:14px;color:var(--mut);margin:10px 0 4px}
 .calc input[type=number]{width:100%;max-width:260px;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg2);color:var(--tx);font-size:16px}
 .calc .out{font-size:15px;margin-top:14px}.calc .big{font-size:28px;font-weight:900;color:var(--acc)}
+
+/* mobile polish (2026-10-10): no horizontal scroll, readable text, larger tap targets */
+img,video,iframe{max-width:100%;height:auto}
+.grid2>*,.hero>*,.foot-grid>*{min-width:0}
+.prose,.lead,.verdict,.faq p{overflow-wrap:break-word}
+@media(max-width:600px){
+ .top{gap:8px;padding:10px 16px}
+ .nav{flex-wrap:nowrap;overflow-x:auto;width:100%;gap:18px;font-size:15px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+ .nav::-webkit-scrollbar{display:none}
+ .nav a{white-space:nowrap;padding:9px 0;flex:0 0 auto}
+ .foot-grid{grid-template-columns:1fr;gap:20px;font-size:15px}
+ .foot-grid a{padding:8px 0}
+ .pc li,.card .price,.calc label,.author p{font-size:15.5px}
+ .disc,.crumbs{font-size:14px}
+ .note{font-size:15px}
+ .foot-grid p{font-size:16px}
+ table{font-size:15px}
+ .crumbs a{display:inline-block;padding:6px 0}
+ .tiny{font-size:13.5px}
+}
