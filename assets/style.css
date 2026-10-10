@@ -92,6 +92,7 @@ img,video,iframe{max-width:100%;height:auto}
  .top{gap:8px;padding:10px 16px}
  .nav{flex-wrap:nowrap;overflow-x:auto;width:100%;gap:18px;font-size:15px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
  .nav::-webkit-scrollbar{display:none}
+ .nav{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent);padding-right:28px}
  .nav a{white-space:nowrap;padding:9px 0;flex:0 0 auto}
  .foot-grid{grid-template-columns:1fr;gap:20px;font-size:15px}
  .foot-grid a{padding:8px 0}
