@@ -30,4 +30,23 @@
 </footer>
 <script src="/assets/config.js"></script>
 <script src="/assets/site.js" defer></script>
+
+<script>
+/* smart-404: route mistyped/distorted URLs to the real page (bots without JS just get the 404) */
+(function () {
+  var p = location.pathname.toLowerCase();
+  function go(u) { location.replace(u); return true; }
+  if (/translation/.test(p))            return go('/reviews/best-fiverr-translation-gigs/');
+  if (/fiverr/.test(p))                 return go('/reviews/fiverr-review/');
+  if (/fee|calculat/.test(p))           return go('/tools/fiverr-fee-calculator/');
+  if (/soulmate|sketch|twin|love/.test(p))   return go('/category/love/');
+  if (/numerolog|astro|tarot|psychic/.test(p)) return go('/category/mind/');
+  if (/manifest|wealth|abundance/.test(p))   return go('/category/abundance/');
+  if (/supplement|weight|diet|health|joint|liv/.test(p)) return go('/category/health/');
+  if (/saas|software|b2b|outreach|lead/.test(p)) return go('/category/saas/');
+  if (/compare/.test(p))                return go('/compare/');
+  if (/marketplace/.test(p))            return go('/marketplace/');
+  go('/reviews/');
+})();
+</script>
 </body></html>
