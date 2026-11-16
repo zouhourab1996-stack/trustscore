@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /cdn-cgi/
 Sitemap: https://trustscore.bond/sitemap.xml
 Sitemap: https://trustscore.bond/sitemap-fiverr-batch.xml
 Sitemap: https://trustscore.bond/sitemap-priority.xml
