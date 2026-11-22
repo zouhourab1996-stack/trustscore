@@ -111,5 +111,5 @@ img,video,iframe{max-width:100%;height:auto}
 
 
 /* Use the same shield-check artwork in the visible brand and browser tab. */
-.mark{background:transparent url('/favicon.svg') center/contain no-repeat!important;box-shadow:none!important;color:transparent!important;border-radius:0!important}
+.mark{background:transparent url('/favicon.svg?v=20261122-brand') center/contain no-repeat!important;box-shadow:none!important;color:transparent!important;border-radius:0!important}
 .mark::before,.mark::after{content:none!important;display:none!important}
