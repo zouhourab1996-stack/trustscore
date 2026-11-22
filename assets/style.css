@@ -108,3 +108,8 @@ img,video,iframe{max-width:100%;height:auto}
  .crumbs a{display:inline-block;padding:6px 0}
  .tiny{font-size:13.5px}
 }
+
+
+/* Use the same shield-check artwork in the visible brand and browser tab. */
+.mark{background:transparent url('/favicon.svg') center/contain no-repeat!important;box-shadow:none!important;color:transparent!important;border-radius:0!important}
+.mark::before,.mark::after{content:none!important;display:none!important}
