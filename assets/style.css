@@ -5,7 +5,11 @@ a{color:#aeb9ff;text-decoration:none}a:hover{text-decoration:underline}
 .top{position:sticky;top:0;z-index:9;display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:12px 22px;background:rgba(11,16,32,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .logo{display:flex;align-items:center;gap:9px;color:var(--tx);font-size:19px;font-weight:700}
 .logo:hover{text-decoration:none}
-.mark{width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#f5c451,#e8862e);display:grid;place-items:center;color:#141414;font-weight:900;font-size:13px}
+.mark{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,#f5c451,#e8862e);display:grid;place-items:center;color:#141414;font-weight:900;font-size:0;position:relative;box-shadow:0 3px 12px rgba(245,196,81,.18)}
+.mark:before{content:"";width:13px;height:16px;border:2.5px solid #141414;border-radius:3px 3px 7px 7px;clip-path:polygon(0 0,100% 0,100% 70%,50% 100%,0 70%);position:absolute}
+.mark:after{content:"";width:6px;height:3px;border-left:2px solid #141414;border-bottom:2px solid #141414;transform:rotate(-45deg);position:absolute;top:13px;left:13px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:3px;border-radius:5px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 .logo small{color:var(--mut);font-weight:400}
 .nav{display:flex;gap:16px;flex-wrap:wrap;font-size:14.5px}
 .nav a{color:var(--mut)}.nav a:hover{color:var(--tx)}
