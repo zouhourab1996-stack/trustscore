@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="1bn7vlEdytzSLN2EPXm3VZTS1XTruHc0fQCI36fWJLg">
+<meta name="theme-color" content="#10172a">
+<title>Website Trust Score Checklist &amp; Calculator | TrustScore</title>
+<meta name="description" content="Assess a website's trust signals with a free checklist: identity, contact details, policies, payments, reviews and evidence. No URL scan or data upload.">
+<link rel="canonical" href="https://trustscore.bond/tools/website-trust-checklist/">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TrustScore">
+<meta property="og:title" content="Website Trust Score Checklist &amp; Calculator | TrustScore">
+<meta property="og:description" content="A free, transparent checklist for assessing visible website trust signals. Runs in your browser and does not scan or upload a URL.">
+<meta property="og:url" content="https://trustscore.bond/tools/website-trust-checklist/">
+<meta property="og:image" content="https://trustscore.bond/og/home.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Website Trust Score Checklist | TrustScore">
+<meta name="twitter:description" content="Check visible website trust signals with a free browser-based checklist. Not a malware scan or safety guarantee.">
+<meta name="twitter:image" content="https://trustscore.bond/og/home.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1W7PC1JDKH"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-1W7PC1JDKH');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trustscore.bond/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://trustscore.bond/tools/"},{"@type":"ListItem","position":3,"name":"Website Trust Score Checklist","item":"https://trustscore.bond/tools/website-trust-checklist/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Website Trust Score Checklist","url":"https://trustscore.bond/tools/website-trust-checklist/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A browser-based self-assessment that counts visible website trust signals. It does not scan URLs, detect malware or certify a website as safe.","publisher":{"@type":"Organization","name":"TrustScore","url":"https://trustscore.bond/"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a website trust score?","acceptedAnswer":{"@type":"Answer","text":"A website trust score is a structured way to review visible signals such as clear ownership, contact details, policies, payment terms, independent reviews and evidence for claims. Different services use different methods, so a score is only meaningful when its method is explained."}},{"@type":"Question","name":"Does this checklist scan a website or detect malware?","acceptedAnswer":{"@type":"Answer","text":"No. It does not fetch a URL, inspect code, scan for malware or query a reputation database. You check the signals yourself; the score is calculated locally in your browser and is not uploaded."}},{"@type":"Question","name":"Does HTTPS mean a website is trustworthy?","acceptedAnswer":{"@type":"Answer","text":"No. HTTPS encrypts the connection, but scammers can also use HTTPS. Check the business identity, contact information, terms, payment route and independent evidence as well."}},{"@type":"Question","name":"What should I check before paying a website?","acceptedAnswer":{"@type":"Answer","text":"Confirm who operates it, how to contact them, the full price and renewal terms, refund and cancellation rules, privacy practices, independent reviews and whether payments stay within a protected checkout."}},{"@type":"Question","name":"Can a high checklist score guarantee that a website is safe?","acceptedAnswer":{"@type":"Answer","text":"No. A high score only means you confirmed many recommended trust signals. It cannot rule out fraud, malware, impersonation, compromised pages or misleading claims."}}]}</script>
+<style>
+.trust-tool{max-width:920px;margin:0 auto}
+.trust-tool .notice{border:1px solid rgba(235,183,93,.45);background:rgba(235,183,93,.08);border-radius:14px;padding:15px 18px;margin:20px 0;color:var(--text)}
+.trust-tool .score-panel{display:grid;grid-template-columns:150px 1fr;gap:22px;align-items:center;border:1px solid var(--line);background:var(--card);border-radius:18px;padding:22px;margin:22px 0}
+.trust-tool .score-number{font-size:2.5rem;font-weight:800;letter-spacing:-.04em}
+.trust-tool .score-number small{font-size:.95rem;color:var(--muted);font-weight:600;letter-spacing:0}
+.trust-tool .progress{height:12px;background:var(--line);border-radius:99px;overflow:hidden;margin:12px 0}
+.trust-tool .progress>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#d7a64b,#5fc69a);transition:width .2s ease}
+.trust-tool .checklist{display:grid;gap:10px;margin:18px 0}
+.trust-tool .checkrow{display:grid;grid-template-columns:24px 1fr auto;gap:12px;align-items:start;padding:15px 16px;border:1px solid var(--line);border-radius:13px;background:var(--card);cursor:pointer}
+.trust-tool .checkrow:has(input:checked){border-color:#4ea987;background:rgba(78,169,135,.08)}
+.trust-tool .checkrow input{width:18px;height:18px;margin:3px 0 0;accent-color:#48a77e}
+.trust-tool .checkrow b{display:block;margin-bottom:4px}
+.trust-tool .checkrow small{display:block;color:var(--muted);line-height:1.5}
+.trust-tool .weight{font-size:.78rem;font-weight:700;color:var(--muted);white-space:nowrap}
+.trust-tool .actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}
+.trust-tool .reset{border:1px solid var(--line);background:transparent;color:var(--text);padding:10px 16px;border-radius:10px;cursor:pointer;font:inherit}
+.trust-tool .score-status{font-weight:700}
+.trust-tool .source-list li{margin:9px 0}
+@media(max-width:620px){.trust-tool .score-panel{grid-template-columns:1fr;gap:8px}.trust-tool .score-number{font-size:2.1rem}.trust-tool .checkrow{grid-template-columns:22px 1fr}.trust-tool .weight{grid-column:2}}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="/"><span class="mark">TS</span>TrustScore<small>.bond</small></a>
+  <nav class="nav"><a href="/reviews/">Reviews</a><a href="/category/love/">💘 Love &amp; Soulmate Readings</a><a href="/category/mind/">🔮 Numerology</a><a href="/category/abundance/">🌟 Manifestation</a><a href="/category/health/">💊 Health</a><a href="/category/saas/">🧰 Software</a><a href="/compare/">Comparisons</a><a href="/tools/">Tools</a><a href="/methodology/">How we score</a><a href="/marketplace/">Marketplace</a></nav>
+</header>
+<main id="main" class="trust-tool">
+<nav class="crumbs"><a href="/">Home</a> › <a href="/tools/">Tools</a> › <span>Website Trust Score Checklist</span></nav>
+<p class="kicker">Free buyer tool · No sign-up · Runs locally</p>
+<h1>Website Trust Score Checklist</h1>
+<p class="lead">Review the signals you can verify before you buy, create an account or share personal information. Tick each item only when you have checked it.</p>
+
+<div class="notice"><b>Important limitation:</b> This is a self-assessment checklist, not an automated website scanner. It does not inspect a URL, test a certificate, detect malware, verify a company or guarantee safety. An unchecked item means “not verified yet” — it is not proof of fraud.</div>
+
+<section class="score-panel" aria-live="polite">
+  <div>
+    <div class="score-number"><span id="score">0</span><small> / 100</small></div>
+    <div class="weight">Verified signals</div>
+  </div>
+  <div>
+    <div class="score-status" id="status">No checks completed yet</div>
+    <div class="progress" role="progressbar" aria-label="Verified trust signals" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress"><span id="bar"></span></div>
+    <p class="note" id="count">0 of 10 checks completed. Your selections stay in this browser tab.</p>
+  </div>
+</section>
+
+<h2>Check the website's visible trust signals</h2>
+<div class="checklist" id="checklist">
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>HTTPS works across the pages you use</b><small>The browser shows no certificate warning, and checkout or sign-in pages do not unexpectedly switch to insecure HTTP.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="15"><span><b>The operator's identity is clear</b><small>You can find a real business or legal name and a meaningful explanation of who is responsible for the service.</small></span><span class="weight">15 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>There is a working contact route</b><small>The site provides a support email, contact form, phone number or physical address appropriate to what it sells.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>Pricing and renewals are transparent</b><small>You can see the full cost, recurring charges, trial end date, currency and any extra fees before paying.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>Refund and cancellation terms are accessible</b><small>The rules explain how to cancel, request a refund and contact support if a purchase goes wrong.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>The privacy policy explains data use</b><small>It identifies the data collected, why it is needed, who it may be shared with and how to make a privacy request.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>Payment stays in a recognisable, protected checkout</b><small>The site does not pressure you to pay by gift card, wire transfer, crypto-only transfer or an unrelated personal account.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>Independent reviews contain specific detail</b><small>You can find feedback outside the seller's own website, including balanced experiences rather than only identical praise.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="10"><span><b>Important claims have evidence</b><small>Health, income, performance and savings claims are explained and supported; the site avoids guaranteed outcomes and pressure tactics.</small></span><span class="weight">10 points</span></label>
+  <label class="checkrow"><input type="checkbox" data-weight="5"><span><b>Ownership and commercial disclosures are visible</b><small>Affiliate links, sponsorships, paid placements and material relationships are clearly identified.</small></span><span class="weight">5 points</span></label>
+</div>
+
+<div class="actions">
+  <button class="cta" type="button" id="reset">Reset checklist</button>
+  <span class="note">No account, cookies or server submission are needed.</span>
+</div>
+
+<h2>How to interpret your result</h2>
+<ul>
+  <li><b>0–39:</b> Few recommended signals have been verified. Pause and investigate the missing information before paying or sharing data.</li>
+  <li><b>40–69:</b> Some useful signals are present. Check the remaining items and look for independent evidence.</li>
+  <li><b>70–89:</b> Many recommended signals are visible. Still verify the seller, terms and payment route independently.</li>
+  <li><b>90–100:</b> You have checked most of the list. This is strong checklist coverage, not a safety certification.</li>
+</ul>
+<p class="note">The score counts the points attached to items you personally confirmed. It does not grade the website against a hidden database. A high score cannot rule out malware, phishing, impersonation, fake reviews or a compromised site.</p>
+
+<h2>Further checks from trusted sources</h2>
+<ul class="source-list">
+  <li><a href="https://consumer.ftc.gov/articles/online-shopping" target="_blank" rel="noopener">US Federal Trade Commission: online shopping advice</a> — review sellers, payment methods and refund terms.</li>
+  <li><a href="https://transparencyreport.google.com/safe-browsing/search" target="_blank" rel="noopener">Google Safe Browsing site status</a> — check whether Google currently flags a site as dangerous. A clean result is not a guarantee.</li>
+  <li><a href="https://lookup.icann.org/" target="_blank" rel="noopener">ICANN Lookup</a> — review available domain registration information. Domain age or privacy protection alone does not establish trust.</li>
+  <li><a href="https://www.cisa.gov/secure-our-world" target="_blank" rel="noopener">CISA Secure Our World</a> — practical guidance for safer online accounts and browsing.</li>
+</ul>
+
+<h2>Frequently asked questions</h2>
+<div class="faq">
+  <details><summary>What is a website trust score? <span class="chev">+</span></summary><div class="a">It is a structured way to review visible signals such as clear ownership, contact details, policies, payment terms, independent reviews and evidence for claims. Different services use different methods, so a score is only meaningful when its method is explained.</div></details>
+  <details><summary>Does this checklist scan a website or detect malware? <span class="chev">+</span></summary><div class="a">No. It does not fetch a URL, inspect code, scan for malware or query a reputation database. You check the signals yourself; the score is calculated locally in your browser and is not uploaded.</div></details>
+  <details><summary>Does HTTPS mean a website is trustworthy? <span class="chev">+</span></summary><div class="a">No. HTTPS encrypts the connection, but scammers can also use HTTPS. Check the business identity, contact information, terms, payment route and independent evidence as well.</div></details>
+  <details><summary>What should I check before paying a website? <span class="chev">+</span></summary><div class="a">Confirm who operates it, how to contact them, the full price and renewal terms, refund and cancellation rules, privacy practices, independent reviews and whether payments stay within a protected checkout.</div></details>
+  <details><summary>Can a high checklist score guarantee that a website is safe? <span class="chev">+</span></summary><div class="a">No. A high score only means you confirmed many recommended trust signals. It cannot rule out fraud, malware, impersonation, compromised pages or misleading claims.</div></details>
+</div>
+
+<p class="note">Method: the weights are TrustScore's editorial checklist, not an industry certification or an objective fraud probability. Read <a href="/methodology/">how our scoring works</a> and our <a href="/disclosure/">commercial disclosure</a>. For product-specific assessments, browse our <a href="/reviews/">independent reviews</a> or other <a href="/tools/">free buyer tools</a>.</p>
+</main>
+<footer>
+  <p><a href="/">TrustScore</a> · <a href="/about/">About</a> · <a href="/methodology/">Methodology</a> · <a href="/disclosure/">Disclosure</a> · <a href="/privacy/">Privacy</a> · <a href="/contact/">Contact</a></p>
+  <p class="tiny">© 2026 TrustScore. This checklist is educational information, not a cybersecurity audit, legal opinion or guarantee of safety.</p>
+</footer>
+<script>
+(() => {
+  const checks = Array.from(document.querySelectorAll("#checklist input[type=checkbox]"));
+  const score = document.getElementById("score");
+  const bar = document.getElementById("bar");
+  const progress = document.getElementById("progress");
+  const status = document.getElementById("status");
+  const count = document.getElementById("count");
+  function update() {
+    const selected = checks.filter((item) => item.checked);
+    const points = selected.reduce((sum, item) => sum + Number(item.dataset.weight || 0), 0);
+    score.textContent = String(points);
+    bar.style.width = points + "%";
+    progress.setAttribute("aria-valuenow", String(points));
+    count.textContent = selected.length + " of " + checks.length + " checks completed. Your selections stay in this browser tab.";
+    if (!selected.length) status.textContent = "No checks completed yet";
+    else if (points < 40) status.textContent = "Few recommended trust signals verified — investigate further";
+    else if (points < 70) status.textContent = "Some useful signals verified — check what is still unknown";
+    else if (points < 90) status.textContent = "Many signals verified — continue checking independent evidence";
+    else status.textContent = "Strong checklist coverage — not a safety certification";
+  }
+  checks.forEach((item) => item.addEventListener("change", update));
+  document.getElementById("reset").addEventListener("click", () => {
+    checks.forEach((item) => { item.checked = false; });
+    update();
+  });
+  update();
+})();
+</script>
+<script src="/assets/config.js"></script>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>
